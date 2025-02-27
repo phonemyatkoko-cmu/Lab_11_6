@@ -1,0 +1,8 @@
+services:
+  myapp:
+    image: phonemyat52/test
+    build: 
+      context: .
+
+    ports: 
+     - "5500:80"
