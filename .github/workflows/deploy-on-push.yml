@@ -2,7 +2,7 @@ name: Deploy myProject to host
 'on':
  push:
    branches:
-     - main
+     - master
 
 jobs: 
  docker:
