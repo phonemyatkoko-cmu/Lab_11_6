@@ -34,6 +34,7 @@ jobs:
          context: .
          push: true
          tags: phonemyat52/234-deploylab-lab11_project:latest
+         no-cache: true 
      -
        name: copy file via ssh password
        uses: appleboy/scp-action@v0.1.7
@@ -57,6 +58,7 @@ jobs:
           echo ${{ secrets.DOCKER_HUB_TOKEN }} | docker login --username
           ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
           docker compose down
+          docker image prune -a -f  # Remove old images
           docker compose pull
           docker compose up -d
           rm -rf /home/ubuntu/lab_11
