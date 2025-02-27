@@ -1,6 +1,6 @@
 services:
   myapp:
-    image: phonemyat52/test
+    image: phonemyat52/234-deploylab-lab11_project:latest
     build: 
       context: .
 
